@@ -88,4 +88,8 @@ body {
 .container #dayToBDay {
   font-size: 3rem;
   font-weight: 900;
+}
+.container #errorText {
+  display: none;
+  color: red;
 }/*# sourceMappingURL=style.css.map */

@@ -1,11 +1,17 @@
 const bDayInput = document.getElementById('bDayInput');
 const dayToBDayOutput = document.getElementById('dayToBDay');
 const bDayBtn = document.getElementById('bDayBtn');
-
+const errorText = document.getElementById('errorText');
 
 bDayBtn.addEventListener('click', calculateDaysToBDay);
 
 function calculateDaysToBDay() {
+    if (bDayInput.value.trim() === '') {
+        errorText.style.display = 'block';
+    } else {
+        errorText.style.display = 'none';
+    }
+
     const bDayDate = new Date(bDayInput.value);
     const currentDay = new Date();
 
@@ -22,6 +28,10 @@ function calculateDaysToBDay() {
         dayWord = 'дня';
     }
 
+    if (daysToBDay) {
+        dayToBDayOutput.textContent = `${daysToBDay} ${dayWord}`;
+    } else {
+        dayToBDayOutput.textContent = `Пока не введёшь дату, не покажу`;
+    }
 
-    dayToBDayOutput.textContent = `${daysToBDay} ${dayWord}`;
 }

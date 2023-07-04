@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/bck.jpg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    background-color: rgba(252, 253, 253, 0.85);
+    width: 50vw;
+    min-height: 90vh;
+    padding: 3rem;
+    margin: 3rem auto;
+    border-radius: 2rem;
+
+    .bday {
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+            color: rgb(5, 50, 253);
+            font-weight: 700;
+            text-shadow: 5px 5px 5px rgb(206, 245, 252);
+            margin: 1rem auto;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: rgb(5, 50, 253);
+            font-weight: 700;
+        }
+
+        .bday__cake {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            animation: cakeAnimation 0.5s infinite alternate;
+            margin: 1rem auto 1rem;
+        }
+
+        @keyframes cakeAnimation {
+            0% {
+                transform: rotate(0) translateY(0);
+            }
+
+            100% {
+                transform: rotate(0) translateY(5px);
+            }
+        }
+
+        #bDayInput {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 5px;
+            border: none;
+            width: 13rem;
+            height: 2rem;
+            padding: 2rem;
+            font-size: 1.3rem;
+            box-shadow: 1px 1px 10px rgb(190, 190, 252);
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                color: rgb(5, 50, 253);
+                outline: none;
+                cursor: pointer;
+            }
+        }
+
+        .bday__button {
+            display: flex;
+            align-items: center;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            border: none;
+            background-color: rgb(210, 228, 252);
+            font-size: 1.3rem;
+            color: rgb(5, 50, 253);
+            transition: 0.5s all;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(237, 243, 255);
+                box-shadow: 2px 2px 8px blue;
+            }
+
+            .bday__button-img {
+                width: 40px;
+            }
+        }
+    }
+
+    #dayToBDay {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+}

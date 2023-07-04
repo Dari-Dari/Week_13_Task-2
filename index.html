@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Дни до дня рождения</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="bday">
+                <h1>Узнай сколько дней осталось <br> до дня рождения</h1>
+                <img src="./assets/cake.png" alt="img" class="bday__cake">
+                <div>
+                    <p>Выбери дату</p>
+                    <div>
+                        <input type="date" id="bDayInput" />
+                    </div>
+                    <button id="bDayBtn" class="bday__button"><span>Рассчитать</span>
+                        <img src="./assets/birthday.png" alt="img" class="bday__button-img"></button>
+                    <p>До дня рождения осталось:</p>
+                    <p id="dayToBDay"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="birthday.js"></script>
+</body>
+
+</html>
